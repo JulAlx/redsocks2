@@ -12,6 +12,6 @@ Just clone 'libevent2.1+' from OpenWRT master into the 'package' directory and i
 
 Once compiled and installed, clone this repository into the 'package' directory and compile the application:
 
-<code>git clone https://github.com/JulAlx/redsocks2-https.git ./package/redsocks2</code>
+<code>git clone https://github.com/JulAlx/redsocks2.git ./package/</code>
 
 <code>make package/redsocks2/compile -j1 V=s</code>
