@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=redsocks2-https
+PKG_NAME:=redsocks2
 PKG_VERSION:=0.67
 PKG_RELEASE:=2
 
@@ -21,7 +21,7 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)/$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSI
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/redsocks2-https
+define Package/redsocks2
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Redirect any TCP connection to a HTTPS/HTTP proxy server.
@@ -29,26 +29,26 @@ define Package/redsocks2-https
 	DEPENDS:=+libevent2 +libopenssl +zlib
 endef
 
-define Package/redsocks2-https/description
+define Package/redsocks2/description
 This is a modified version of the original redsocks2. \
 It has been modified to enable 'HTTPS Proxy' feature by default \
 and consequently 'Shadowsocks' disabled. Can't have both enabled at \
 the same time. "Why?", don't ask me, speak to its developer!
 endef
 
-define Package/redsocks2-https/conffiles
-/etc/config/redsocks2-https
+define Package/redsocks2/conffiles
+/etc/config/redsocks2
 endef
 
 define Build/Compile
 	$(call Build/Compile/Default, DISABLE_SHADOWSOCKS=true ENABLE_HTTPS_PROXY=true)
 endef
 
-define Package/redsocks2-https/install
+define Package/redsocks2/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks2 $(1)/usr/sbin
-	$(INSTALL_DIR) $(1)/etc/redsocks2-https
-	$(INSTALL_DATA) ./files/redsocks2-https.template $(1)/etc/redsocks2-https/config.template
+	$(INSTALL_DIR) $(1)/etc/redsocks2
+	$(INSTALL_DATA) ./files/redsocks2.template $(1)/etc/redsocks2/config.template
 endef
 
-$(eval $(call BuildPackage,redsocks2-https))
+$(eval $(call BuildPackage,redsocks2))
