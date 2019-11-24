@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=redsocks2
 PKG_VERSION:=0.67
-PKG_RELEASE:=2
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/JulAlx/redsocks2.git
+PKG_SOURCE_URL:=https://github.com/semigodking/redsocks.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_VERSION:=72f1952d4f6c4d35a4d7b4063f444e92f3c7a925
+PKG_SOURCE_VERSION:=53cad23a14afdd5f61a0542615beb7f4d98be728
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 PKG_MAINTAINER:=julalx  <julalx@outlook.com>
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)/$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
@@ -25,7 +25,7 @@ define Package/redsocks2
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Redirect any TCP connection to a HTTPS/HTTP proxy server.
-	URL:=https://github.com/JulAlx/redsocks.git
+	URL:=https://github.com/semigodking/redsocks.git
 	DEPENDS:=+libevent2 +libopenssl
 endef
 
