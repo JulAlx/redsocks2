@@ -25,7 +25,7 @@ define Package/redsocks2-https
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=Redirect any TCP connection to a HTTPS/HTTP proxy server.
-	URL:=https://github.com/semigodking/redsocks
+	URL:=https://github.com/JulAlx/redsocks2-https.git
 	DEPENDS:=+libevent2 +libopenssl
 endef
 
