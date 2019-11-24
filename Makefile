@@ -11,8 +11,9 @@ PKG_NAME:=redsocks2-https
 PKG_VERSION:=0.67
 PKG_RELEASE:=1
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/JulAlx/redsocks.git
+
+PKG_SOURCE:=release-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/JulAlx/redsocks2/archive
 PKG_MAINTAINER:=JulAlx, hit me on Github!
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)/$(BUILD_VARIANT)/$(PKG_NAME)-$(PKG_VERSION)
 
