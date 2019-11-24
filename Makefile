@@ -46,7 +46,7 @@ endef
 
 define Package/redsocks2-https/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks2-https $(1)/usr/sbin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks2 $(1)/usr/sbin
 	$(INSTALL_DIR) $(1)/etc/redsocks2-https
 	$(INSTALL_DATA) ./files/redsocks2-https.template $(1)/etc/redsocks2-https/config.template
 endef
