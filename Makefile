@@ -31,9 +31,7 @@ endef
 
 define Package/redsocks2/description
 This is a modified version of the original redsocks2. \
-It has been modified to enable 'HTTPS Proxy' feature by default \
-and consequently 'Shadowsocks' disabled. Can't have both enabled at \
-the same time. "Why?", don't ask me, speak to its developer!
+It has been modified to enable 'HTTPS Proxy' feature by default.
 endef
 
 define Package/redsocks2/conffiles
@@ -41,7 +39,7 @@ define Package/redsocks2/conffiles
 endef
 
 define Build/Compile
-	$(call Build/Compile/Default,DISABLE_SHADOWSOCKS=true ENABLE_HTTPS_PROXY=true)
+	$(call Build/Compile/Default,ENABLE_HTTPS_PROXY=true)
 endef
 
 define Package/redsocks2/install
