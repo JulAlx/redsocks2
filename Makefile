@@ -24,7 +24,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/redsocks2
 	SECTION:=net
 	CATEGORY:=Network
-	TITLE:=Redirect any TCP connection to a HTTPS/HTTP proxy server.
+	TITLE:=Redirect any TCP connection to a Socks5/HTTPS/HTTP proxy server.
 	URL:=https://github.com/semigodking/redsocks.git
 	DEPENDS:=+libopenssl +libevent2 +libevent2-openssl
 endef
