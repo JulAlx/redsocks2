@@ -47,7 +47,7 @@ define Package/redsocks2/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks2 $(1)/usr/sbin
 	$(INSTALL_DIR) $(1)/etc/redsocks2
-	$(INSTALL_DATA) ./files/redsocks2.template $(1)/etc/redsocks2/config.template
+	$(INSTALL_DATA) ./files/redsocks2.conf $(1)/etc/redsocks2/redsocks2.conf
 endef
 
 $(eval $(call BuildPackage,redsocks2))
