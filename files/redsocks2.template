@@ -6,25 +6,23 @@ base {
 }
 
 redsocks {
- local_ip = 192.168.1.1; // Listening interface.
- local_port = 3128; // Listening port.
- ip = 1.2.3.4; // Remote proxy IP.
- port = 8443; // Remote proxy port.
- type = https-connect; // Use 'https-connect' with HTTPS proxies and 'http-connect' with HTTP proxies.
- // autoproxy = 0; // Change this parameter to 1 to enable the 'auto proxy' feature.
-	// When autoproxy is set to non-zero, the connection to target
-	// will be made directly first. If direct connection to target
-	// fails for timeout/connection refuse, redsocks will try to
-	// connect to target via the proxy.
+ bind = "0.0.0.0:5050";
+ relay = "127.0.0.1:3128";
+ type = http-connect;
+ autoproxy = 0;
+ //timeout = 13;
+ //login = username;
+ //password = passwd;
+}
 
- // timeout = 10; // timeout is meaningful when 'autoproxy' is non-zero.
- // timeout value is used when trying to connect to a destination
- // directly. Default is 10 seconds. When it is set to 0, default
- // timeout value will be used.
- // NOTE: Don't mess with this one if you don't know what it is. It may blow up on your face! Jeez!
-
- // login = username; // Remote proxy username.
- // password = passwd; // Remote proxy password.
+redsocks {
+ bind = "0.0.0.0:6060";
+ relay = "127.0.0.1:3128";
+ type = http-connect;
+ autoproxy = 0;
+ //timeout = 13;
+ //login = username;
+ //password = passwd;
 }
 
 //tcpdns {
